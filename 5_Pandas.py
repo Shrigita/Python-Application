@@ -1,0 +1,29 @@
+import pandas as pd 
+
+print("Empty DataFrame :")
+df = pd.DataFrame()
+print(df)
+#DataFrame with list
+data = [1,2,3,4,5]
+df = pd.DataFrame(data)
+print(df)
+
+data =[['PPA',4,18000],['LB',3,18200],['Python',3,18500]]
+df= pd.DataFrame(data,columns =['Name','Duration','Fee'])
+print(df)
+
+data = {'Name ':['PPA','LB','Python'],'Duration': [4,3,3],'Fee' :[18000,18200,18500]}
+df = pd.DataFrame(data)
+print(df)
+
+data =[{'Name': 'PPA','Duration ': 3,'Fee':18000},{'Name': 'PPA','Duration ': 3,'Fee':18000},{'Name': 'Python','Duration ': 3,'Fee':18050}]
+df =pd.DataFrame(data)
+print(df)
+
+data = [{'Name' : 'PPA',"Duration":3,'fees':3211},{'Name' : 'LB',"Duration":3,'fees':32101}]
+df =pd.DataFrame(data)
+print(df)
+
+d ={'one':pd.Series([1,2,3],index =['a','b','c']),'two':pd.Series([1,2,3,4],index =['x','y','z','w'])}
+df =pd.DataFrame(d)
+print(df['one'])
